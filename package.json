@@ -1,0 +1,27 @@
+{
+  "name": "aegis-ai-core",
+  "version": "1.0.0",
+  "description": "AEGIS AI - Security Scanner & ISO 27001 Evidence Core Modules (Open-Source Core)",
+  "main": "index.js",
+  "type": "module",
+  "workspaces": [
+    "aegis-scanner",
+    "aegis-compliance",
+    "aegis-cli",
+    "aegis-dashboard"
+  ],
+  "scripts": {
+    "scan": "node aegis-cli/bin/aegis.js scan",
+    "evidence": "node aegis-cli/bin/aegis.js evidence",
+    "start": "node aegis-cli/bin/aegis.js dashboard",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "private": true
+}

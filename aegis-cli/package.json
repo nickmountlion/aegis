@@ -1,0 +1,12 @@
+{
+  "name": "aegis-cli",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "aegis": "./bin/aegis.js"
+  },
+  "dependencies": {
+    "aegis-scanner": "file:../aegis-scanner",
+    "aegis-compliance": "file:../aegis-compliance"
+  }
+}

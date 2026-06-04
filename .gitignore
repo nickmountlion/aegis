@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Generated Compliance Reports
+compliance-evidence/
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Gemini and Assistant temporary files
+.gemini/
