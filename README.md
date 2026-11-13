@@ -61,14 +61,14 @@ node aegis-cli/bin/aegis.js dashboard
 node test-run.js
 ```
 
-## 3-Agent ISO 27001 Evidence Pipeline (~31s Claim & Scope)
+## 3-Agent ISO 27001 Evidence Pipeline (Scope & Reproducibility)
 
 In the broader **governed AI SecOps** architecture, evidence generation is designed as a 3-agent pipeline:
 1. **Scanner Agent**: Runs deterministic SAST and secret checks (`aegis-scanner`).
 2. **Compliance Mapping Agent**: Maps findings and repository metadata to ISO 27001 controls (`aegis-compliance`).
 3. **Governance Review Agent**: Validates control narratives and flags findings requiring human sign-off.
 
-**Reproducibility note:** This open-core repository implements the deterministic Stage 1 and Stage 2 engines in pure Node.js (scanning `mock-project` in ~8 ms locally). The LLM-backed multi-agent orchestration layer and the reported **~31-second** end-to-end pipeline benchmark are **not** included in this repository and therefore cannot be independently reproduced from this codebase alone. Note also that `aegis-cli` currently uses placeholder Git metadata rather than live `git log` inspection unless integrated externally, and outputs custom JSON (`evidence_payload.json`) rather than SARIF 2.1.0.
+**Reproducibility note:** This open-core repository implements the deterministic Stage 1 and Stage 2 engines in pure Node.js (scanning `mock-project` in ~8 ms locally). The LLM-backed multi-agent orchestration layer are **not** included in this repository. An end-to-end run of roughly 31 seconds was observed in the author's own testing of that full pipeline; it is a single observation, not a benchmark, and cannot be reproduced from this codebase alone. Note also that `aegis-cli` currently uses placeholder Git metadata rather than live `git log` inspection unless integrated externally, and outputs custom JSON (`evidence_payload.json`) rather than SARIF 2.1.0.
 
 ## Security & Confidentiality
 
