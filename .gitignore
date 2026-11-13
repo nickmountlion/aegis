@@ -4,9 +4,22 @@ node_modules/
 # Generated Compliance Reports
 compliance-evidence/
 
+# Test coverage & temporary outputs
+coverage/
+*.tmp.*
+
+# Environment & Secret Files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
 # IDE and OS files
 .idea/
 .vscode/
+*.code-workspace
 .DS_Store
 Thumbs.db
 
@@ -14,5 +27,5 @@ Thumbs.db
 *.log
 npm-debug.log*
 
-# Gemini and Assistant temporary files
+# Assistant temporary files
 .gemini/
